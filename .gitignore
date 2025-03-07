@@ -1,0 +1,81 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+*.log
+local_settings.py
+
+# Django
+*.pot
+*.mo
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static/collected/
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.DS_Store
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+coverage.html
+coverage.xml
+*.cover
+
+# MongoDB
+*.wt
+*.lock
+*.cbor
+*.bson
+*.idx
+*.data
+
+# Logs
+logs/
+*.log
+
+# Local development settings
+dev.py

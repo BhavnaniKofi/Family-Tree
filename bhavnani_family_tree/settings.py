@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     
     # Custom apps
     'family_pictures',
-    'api',
+    
 ]
 
 MIDDLEWARE = [
@@ -74,22 +74,32 @@ WSGI_APPLICATION = 'bhavnani_family_tree.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'djongo',
-#         'NAME': os.getenv('MONGO_DB_NAME'),
-#         'CLIENT': {
-#             'host': os.getenv('MONGO_DB_HOST'),
-#         }
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
+        'ENGINE': 'djongo',
+        'NAME': os.getenv('MONGO_DB_NAME'),
+        'CLIENT': {
+            'host': os.getenv('MONGO_DB_HOST'),
+            'username': os.getenv('MONGO_USER'),
+            'password': os.getenv('MONGO_PASSWORD'),
+            'authSource': os.getenv('MONGO_AUTH_DB', 'admin'),
+            'authMechanism': os.getenv('MONGO_AUTH_MECHANISM', 'SCRAM-SHA-1')
+            
+        }
     }
 }
+
+
+
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / "db.sqlite3",
+#     }
+# }
 
 
 # Password validation
